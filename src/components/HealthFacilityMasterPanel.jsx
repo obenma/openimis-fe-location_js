@@ -8,6 +8,7 @@ import {
   TextAreaInput,
   withModulesManager,
   ValidatedTextInput,
+  GRID_RESPONSIVE_SMALL,
 } from "@openimis/fe-core";
 import { Grid } from "@mui/material";
 import { connect } from "react-redux";
@@ -233,7 +234,7 @@ class HealthFacilityMasterPanel extends FormPanel {
               module="location"
               label="HealthFacilityForm.address"
               value={edited.address}
-              rows="2"
+              rows="1"
               readOnly={readOnly}
               onChange={(v, s) => this.updateAttribute("address", v)}
             />
@@ -242,7 +243,7 @@ class HealthFacilityMasterPanel extends FormPanel {
             module="location"
             id="HealthFacility.phone"
             field={
-              <Grid size={1} className="item">
+              <Grid size={GRID_RESPONSIVE_SMALL} className="item">
                 <TextInput
                   module="location"
                   label="HealthFacilityForm.phone"
